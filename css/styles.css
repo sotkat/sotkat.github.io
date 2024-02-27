@@ -1,11 +1,16 @@
 @font-face {
-    font-family: 'FuturaLight';
-    src: url('../fonts/FuturaLight.ttf') format('truetype');
+    font-family: 'Karla';
+    src: url('fonts/Karla-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'FuturaLight', sans-serif;
-    /* Other styles */
+    font-family: 'Karla', sans-serif;
+}
+
+/* Example of using a specific font-weight */
+strong {
+    font-weight: 700;
+    /* Bold weight */
 }
