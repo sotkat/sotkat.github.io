@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'FuturaLight';
+    src: url('../fonts/FuturaLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FuturaLight', sans-serif;
+    /* Other styles */
+}
