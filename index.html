@@ -22,39 +22,33 @@
         height: 100vh;
         background: #e2e2dd;
       }
-
       .container {
         text-align: center;
       }
-
-      .logo {
-        font-size: 48px;
-        margin-bottom: 8px;
+      .logo img {
+        width: 6cm;
+        height: 3cm;
       }
-
-      .subtitle {
-        font-size: 24px;
-        margin-bottom: 32px;
-      }
-
-      .address {
-        font-size: 16px;
-        color: #333;
-      }
-
-      .phone {
-        font-size: 16px;
-        color: #333;
-      }
-
-      /* This is a placeholder for the dots in the wireframe */
-      .dots {
-        margin: 24px 0;
-      }
-
       .slogan {
         margin: 24px 0;
         font-size: 20px;
+        font-style: italic;
+        color: #333;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+      }
+      .animation {
+        width: 30px; /* Adjust based on the size of your GIF */
+        height: auto;
+        vertical-align: -3px;
+      }
+      .address {
+        font-size: 20px;
+        color: #333;
+      }
+      .phone {
+        font-size: 16px;
         color: #333;
       }
     </style>
@@ -62,13 +56,12 @@
   <body>
     <div class="container">
       <div class="logo">
-        <img
-          src="images/Soto_Black_Logo.png"
-          alt="Soto Coffee Logo"
-          style="width: 6cm; height: 3cm"
-        />
+        <img src="images/Soto_Black_Logo.png" alt="Soto Coffee Logo" />
       </div>
-      <div class="slogan">good things are brewing... ☕️</div>
+      <div class="slogan">
+        good things are brewing...
+        <img src="icons/jumping-coffee.gif" alt="Waiting" class="animation" />
+      </div>
       <div class="address">323 CALEDONIAN ROAD<br />LONDON N1 1DR</div>
     </div>
   </body>
