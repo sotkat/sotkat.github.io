@@ -1,46 +1,60 @@
-// import { css } from "styled-components";
+import { css, CSSObject } from "styled-components";
 
-// export const sizes = {
-//   sMobile: `480`,
-//   mobile: `768`,
-//   tablet: `980`,
-//   maxWidth: `1226`,
-// };
+interface Sizes {
+  [key: string]: string;
+}
 
-// // iterate through the sizes and create a media template
-// export const smallerThan = Object.keys(sizes).reduce((accumulator, label) => {
-//   // use em in breakpoints to work properly cross-browser and support users
-//   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
-//   const emSize = sizes[label] / 16;
-//   const newAcc = accumulator;
-//   newAcc[label] = (...args) => css`
-//     @media screen and (max-width: ${emSize}em) {
-//       ${css(...args)}
-//     }
-//   `;
+export const sizes: Sizes = {
+  sMobile: `480`,
+  mobile: `768`,
+  tablet: `980`,
+  maxWidth: `1226`,
+};
 
-//   return newAcc;
-// }, {});
+interface MediaFunc {
+  [key: string]: (...args: any[]) => ReturnType<typeof css>;
+}
 
-// export const largerThan = Object.keys(sizes).reduce((accumulator, label) => {
-//   // use em in breakpoints to work properly cross-browser and support users
-//   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
-//   const emSize = sizes[label] / 16;
-//   const newAcc = accumulator;
-//   newAcc[label] = (...args) => css`
-//     @media screen and (min-width: ${emSize}em) {
-//       ${css(...args)}
-//     }
-//   `;
+// iterate through the sizes and create a media template
+export const smallerThan: MediaFunc = Object.keys(sizes).reduce(
+  (accumulator: MediaFunc, label: string) => {
+    // use em in breakpoints to work properly cross-browser and support users
+    // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
+    const emSize: number = parseInt(sizes[label]) / 16;
+    const newAcc: MediaFunc = { ...accumulator };
+    newAcc[label] = (...args: any[]): ReturnType<typeof css> => css`
+      @media screen and (max-width: ${emSize}em) {
+        ${css(args as any)}
+      }
+    `;
 
-//   return newAcc;
-// }, {});
+    return newAcc;
+  },
+  {}
+);
 
-// export const smallerThanRes = (res) => {
-//   const emSize = res / 16;
-//   return (...args) => css`
-//     @media screen and (max-width: ${emSize}em) {
-//       ${css(...args)}
-//     }
-//   `;
-// };
+export const largerThan: MediaFunc = Object.keys(sizes).reduce(
+  (accumulator: MediaFunc, label: string) => {
+    // use em in breakpoints to work properly cross-browser and support users
+    // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
+    const emSize: number = parseInt(sizes[label]) / 16;
+    const newAcc: MediaFunc = { ...accumulator };
+    newAcc[label] = (...args: any[]): ReturnType<typeof css> => css`
+      @media screen and (min-width: ${emSize}em) {
+        ${css(args as any)}
+      }
+    `;
+
+    return newAcc;
+  },
+  {}
+);
+
+export const smallerThanRes = (res: number) => {
+  const emSize: number = res / 16;
+  return (...args: any[]): ReturnType<typeof css> => css`
+    @media screen and (max-width: ${emSize}em) {
+      ${css(args as any)}
+    }
+  `;
+};

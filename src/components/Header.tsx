@@ -1,5 +1,6 @@
 "use client";
 
+import { largerThan, smallerThan } from "@/util/mediaQueries";
 import React from "react";
 import styled from "styled-components";
 
@@ -30,28 +31,48 @@ const ActiveTimesBannerWrapper = styled.div`
   }
 `;
 
+const AddressBlock = styled(Block)`
+  ${smallerThan.mobile`
+    display: none;
+  `}
+`;
+
+const TimesBlock = styled(Block)`
+  justify-content: flex-end;
+  ${smallerThan.mobile`
+    justify-content: center;
+  `}
+`;
+
 const ActiveTimesBanner = (props: { time: number }) => {
-  if (props.time < 7 || props.time > 17) {
-    return (
-      <ActiveTimesBannerWrapper className="closed">
-        👋 we’re not open! See you tmw!
-      </ActiveTimesBannerWrapper>
-    );
-  }
   return (
     <ActiveTimesBannerWrapper className="open">
-      😊 we’re open!
+      😊 We`re opening soon!
     </ActiveTimesBannerWrapper>
   );
+
+  // if (props.time < 7 || props.time > 17) {
+  //   return (
+  //     <ActiveTimesBannerWrapper className="closed">
+  //       👋 we’re not open! See you tmw!
+  //     </ActiveTimesBannerWrapper>
+  //   );
+  // }
+  // return (
+  //   <ActiveTimesBannerWrapper className="open">
+  //     😊 we’re open!
+  //   </ActiveTimesBannerWrapper>
+  // );
 };
 
 const Header = () => {
   return (
     <Wrapper>
-      <Block>323 CALEDONIAN ROAD, LONDON N1 1DR</Block>
-      <Block style={{ justifyContent: "flex-end" }}>
-        7AM - 5PM <ActiveTimesBanner time={new Date().getHours()} />
-      </Block>
+      <AddressBlock>323 CALEDONIAN ROAD, LONDON N1 1DR</AddressBlock>
+      <TimesBlock>
+        {/**7AM - 5PM */}
+        <ActiveTimesBanner time={new Date().getHours()} />
+      </TimesBlock>
     </Wrapper>
   );
 };

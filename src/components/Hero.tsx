@@ -1,4 +1,5 @@
 "use client";
+import { largerThan, smallerThan } from "@/util/mediaQueries";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
@@ -6,25 +7,38 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   height: 80vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center; /* Center both horizontally and vertically */
   flex-direction: column;
   gap: 10rem;
   position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+
+  ${smallerThan.mobile`
+    height: 100%;
+    gap: 3rem;
+    padding: 5rem 0;
+    margin-bottom: 0;
+  `}
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  & > * {
+    max-width: 100%; /* Ensure images don't overflow container */
+  }
 `;
 
 const Hero = () => {
   return (
     <Wrapper>
       <Image alt="image" src="/images/drawing-1.svg" width={400} height={80} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "2rem",
-        }}
-      >
+      <ImageContainer>
         <Image
           alt="soto coffee logo"
           src="/images/soto-coffee-logo.svg"
@@ -41,7 +55,7 @@ const Hero = () => {
           </a>
           .
         </p>
-      </div>
+      </ImageContainer>
       <Image alt="image" src="/images/drawing-2.svg" width={100} height={70} />
     </Wrapper>
   );

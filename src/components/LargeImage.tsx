@@ -1,10 +1,15 @@
+import { smallerThan } from "@/util/mediaQueries";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  height: 40rem;
+  height: 50rem;
   position: relative;
+
+  ${smallerThan.mobile`
+    height: 20rem;
+  `}
 `;
 
 const LargeImage = () => {
