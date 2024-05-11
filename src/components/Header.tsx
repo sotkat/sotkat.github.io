@@ -57,10 +57,7 @@ const ActiveTimesBannerWrapper = styled.div`
 const ActiveTimesBanner = (props: { time: number }) => {
   return (
     <ActiveTimesBannerWrapper className="open">
-      <p>
-        😊 We`re opening soon! 😊 We`re opening soon! 😊 We`re opening soon! 😊
-        We`re opening soon! 😊 We`re opening soon! 😊 We`re opening soon!
-      </p>
+      <p>Opening soon!</p>
     </ActiveTimesBannerWrapper>
   );
 
