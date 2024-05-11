@@ -9,9 +9,12 @@ const Wrapper = styled.div`
   justify-content: center;
 
   ${smallerThan.mobile`
+  display: block;
+  text-align: center;
+
     img {
-      height: 10rem !important;
-      width: 10rem !important;
+      height: 100% !important;
+      width: 15rem !important;
     }
   `}
 `;
