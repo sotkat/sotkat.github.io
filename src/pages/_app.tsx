@@ -6,6 +6,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>
+          Soto Coffee | Independent cafe serving Colombian coffee in London
+        </title>
         <meta
           name="title"
           content="Soto Coffee | Independent cafe serving Colombian coffee in London"
