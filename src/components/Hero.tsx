@@ -32,6 +32,10 @@ const ImageContainer = styled.div`
   & > * {
     max-width: 100%; /* Ensure images don't overflow container */
   }
+
+  p {
+    line-height: 1.8rem;
+  }
 `;
 
 const Hero = () => {
