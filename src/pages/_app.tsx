@@ -6,12 +6,20 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>My Page | Next.js SEO</title>
+        <title>Soto Coffee London | Single-origin Colombian coffee</title>
         <meta
           name="description"
-          content="This is the meta description for My Page"
+          content="Single-origin colombian coffee in london"
         />
-        {/* Additional meta tags */}
+        <meta
+          name="keywords"
+          content="colombian coffee, london, london coffee, single origin coffee, specialty coffee london, cafe, london cafe, colombian cafe, best coffee in london, best colombian coffee in london, soto colombian coffee"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Soto Coffee" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <main>
         <Layout>
