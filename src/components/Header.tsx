@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const Block = styled.div`
@@ -17,8 +18,19 @@ const Block = styled.div`
 `;
 
 const ActiveTimesBannerWrapper = styled.div`
-  padding: 0.4rem;
+  padding: 0.6rem;
   border-radius: 0.4rem;
+  width: 100%;
+  text-align: center;
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
 
   &.open {
     background-color: #def0ab;
@@ -29,25 +41,25 @@ const ActiveTimesBannerWrapper = styled.div`
     background-color: #d6d6d6;
     color: #db4745;
   }
-`;
 
-const AddressBlock = styled(Block)`
-  ${smallerThan.mobile`
-    display: none;
-  `}
-`;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 
-const TimesBlock = styled(Block)`
-  justify-content: flex-end;
-  ${smallerThan.mobile`
-    justify-content: center;
-  `}
+  p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: move 25s linear infinite;
+  }
 `;
 
 const ActiveTimesBanner = (props: { time: number }) => {
   return (
     <ActiveTimesBannerWrapper className="open">
-      😊 We`re opening soon!
+      <p>
+        😊 We`re opening soon! 😊 We`re opening soon! 😊 We`re opening soon! 😊
+        We`re opening soon! 😊 We`re opening soon! 😊 We`re opening soon!
+      </p>
     </ActiveTimesBannerWrapper>
   );
 
@@ -68,11 +80,7 @@ const ActiveTimesBanner = (props: { time: number }) => {
 const Header = () => {
   return (
     <Wrapper>
-      <AddressBlock>323 CALEDONIAN ROAD, LONDON N1 1DR</AddressBlock>
-      <TimesBlock>
-        {/**7AM - 5PM */}
-        <ActiveTimesBanner time={new Date().getHours()} />
-      </TimesBlock>
+      <ActiveTimesBanner time={new Date().getHours()} />
     </Wrapper>
   );
 };
