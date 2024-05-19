@@ -41,7 +41,7 @@ const ImageContainer = styled.div`
 const Hero = () => {
   return (
     <Wrapper>
-      <Image alt="image" src="/images/drawing-1.svg" width={400} height={80} />
+      <Image alt="image" src="/images/drawing-3.svg" width={450} height={100} />
       <ImageContainer>
         <Image
           alt="soto coffee logo"
@@ -49,6 +49,7 @@ const Hero = () => {
           width={400}
           height={80}
         />
+
         <p>
           Single-origin Colombian coffee at the heart of{" "}
           <a

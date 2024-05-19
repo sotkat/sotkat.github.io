@@ -35,7 +35,7 @@ const MainImages = () => {
       />
       <Image
         alt="image"
-        src="/images/main-image-1.png"
+        src="/images/main-image-3.png"
         width={0}
         height={0}
         style={{ width: "25rem", height: "30rem" }}
@@ -46,7 +46,7 @@ const MainImages = () => {
       />
       <Image
         alt="image"
-        src="/images/main-image-3.png"
+        src="/images/main-image-1.png"
         width={0}
         height={0}
         style={{ width: "25rem", height: "30rem" }}
@@ -55,6 +55,7 @@ const MainImages = () => {
             (max-width: 1200px) 50vw,
             40vw"
       />
+
       <Image
         alt="image"
         src="/images/main-image-4.png"

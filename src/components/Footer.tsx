@@ -57,10 +57,10 @@ const Footer = () => {
         <Title className="font-secondary">Let`s talk coffee</Title>
         <TextWrapper>
           <a href="https://www.instagram.com/sotocoffeen1/" target="_blank">
-            @sotocoffeeen1 (Instagram)
+            Instagram
           </a>
           <a href="https://www.tiktok.com/@sotocoffeen1" target="_blank">
-            @sotocoffeeen1 (TikTok)
+            TikTok
           </a>
         </TextWrapper>
       </Contact>

@@ -10,17 +10,8 @@ const Wrapper = styled.div`
   overflow-x: hidden;
 `;
 
-const Block = styled.div`
-  flex: 1;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
 const ActiveTimesBannerWrapper = styled.div`
   padding: 0.6rem;
-  border-radius: 0.4rem;
   width: 100%;
   text-align: center;
 
@@ -34,8 +25,8 @@ const ActiveTimesBannerWrapper = styled.div`
   }
 
   &.open {
-    background-color: #def0ab;
-    color: #46900b;
+    background-color: #000000;
+    color: #ffffff;
   }
 
   &.closed {
@@ -49,17 +40,18 @@ const ActiveTimesBannerWrapper = styled.div`
 
   p {
     display: inline-block;
-    padding-left: 100%;
-    animation: move 25s linear infinite;
+    padding-left: 20%;
+    animation: move 5s linear infinite;
   }
 `;
 
 const ActiveTimesBanner = (props: { time: number }) => {
   return (
     <ActiveTimesBannerWrapper className="open">
-      <p>
-        Opening soon! Opening soon! Opening soon! Opening soon! Opening soon!
-      </p>
+      <p>Opening soon!</p>
+      <p>Opening soon!</p>
+      <p>Opening soon!</p>
+      <p>Opening soon!</p>
     </ActiveTimesBannerWrapper>
   );
 

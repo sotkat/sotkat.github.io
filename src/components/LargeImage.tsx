@@ -17,7 +17,7 @@ const LargeImage = () => {
     <Wrapper>
       <Image
         alt="image"
-        src="/images/main-image-1.png"
+        src="/images/coffee-shop-full.jpg"
         fill={true}
         style={{ objectFit: "cover" }}
       />
