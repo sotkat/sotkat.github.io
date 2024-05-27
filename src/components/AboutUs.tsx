@@ -48,46 +48,41 @@ const AboutUs = () => {
           height={0}
           style={{ width: "5rem", height: "auto" }}
         />
-        <Title className="font-secondary">Single-origin Colombian coffee</Title>
+        <Title className="font-secondary">
+          Single-origin specialty Colombian coffee
+        </Title>
         <p>
-          A 15 min walk away from King&apos;s Cross Station or a 10 min walk
-          from Caledonian Road Station
+          Independent coffee shop on London&#39;s Caledonian Road, serving
+          authentic Colombian coffee in a simple, welcoming space.
         </p>
       </Block>
       <Block>
         <p>
-          Hola! Welcome to Soto Coffee, your space for authentic Colombian
-          coffee right here in London&apos;s vibrant Caledonian Road area. As an
-          independent, family-owned coffee shop, we pour love and authenticity
-          into every cup. Our space is minimal yet cosy keeping the focus on our
-          single-origin coffee.
+          Our coffee is sourced directly from Colombia. This means not just
+          great taste, but also a true connection to our roots. We support small
+          Colombian farms, focusing on quality and sustainability with every cup
+          we serve.
         </p>
+
         <p>
-          Each bean is sourced directly from Colombia—ensuring not just a
-          delicious brew, but a connection to our roots. Our doors are open to
-          everyone whether you&apos;re a coffee aficionado or just in need of a
-          comforting sip. Alongside our expertly crafted coffees, we offer a
-          selection of non-coffee drinks and fresh pastries. So, pull up a chair
-          and let&apos;s share stories over a cup.
+          Along with expertly made coffee, we offer fresh pastries and other
+          non-coffee drinks. Whether you&#39;re a coffee aficionado or just in
+          need of a comforting place to relax, we&#39;re here for you.
         </p>
       </Block>
       <Block>
-        {" "}
         <p>
-          Our doors are open to everyone, whether you&apos;re a coffee
-          aficionado or just in need of a comforting sip. We welcome you to
-          explore our carefully curated menu, featuring not only expertly
-          crafted coffees but also a selection of non-coffee drinks and freshly
-          baked pastries. Each item is chosen to complement our coffee offerings
-          and provide a delightful experience for every palate.
+          Our shop is minimal yet cosy, making the coffee the star of the show.
+          Sit down, enjoy a cup, and maybe share a story or two. We&#39;re open
+          to everyone who&#39;s looking for a great cup of coffee and a quiet
+          spot to pause.
         </p>
+
         <p>
-          At Soto Coffee, we believe in creating a community space where people
-          can come together and share moments. Pull up a chair and let&apos;s
-          share stories over a cup. Whether you&apos;re here to catch up with
-          friends, enjoy a quiet moment alone, or meet new people, our coffee
-          shop is the perfect place to relax and connect. We look forward to
-          welcoming you and making you a part of our Soto Coffee family.
+          Stop by Soto Coffee for your daily brew or a quick pastry to go. We
+          promise a warm welcome and a great cup of coffee every time you visit.
+          We&#39;re excited to become a part of your daily routine and look
+          forward to seeing you soon.
         </p>
       </Block>
     </Wrapper>

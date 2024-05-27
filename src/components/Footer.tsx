@@ -54,7 +54,9 @@ const Footer = () => {
   return (
     <Wrapper>
       <Contact>
-        <Title className="font-secondary">Let`s talk coffee</Title>
+        <Title className="font-secondary">
+          Good things are brewing... always.
+        </Title>
         <TextWrapper>
           <a href="https://www.instagram.com/sotocoffeen1/" target="_blank">
             Instagram

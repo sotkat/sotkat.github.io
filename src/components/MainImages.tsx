@@ -24,6 +24,17 @@ const MainImages = () => {
     <Wrapper>
       <Image
         alt="image"
+        src="/images/main-image-1.png"
+        width={0}
+        height={0}
+        style={{ width: "25rem", height: "30rem" }}
+        sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            40vw"
+      />
+      <Image
+        alt="image"
         src="/images/main-image-2.png"
         width={0}
         height={0}
@@ -36,17 +47,6 @@ const MainImages = () => {
       <Image
         alt="image"
         src="/images/main-image-3.png"
-        width={0}
-        height={0}
-        style={{ width: "25rem", height: "30rem" }}
-        sizes="
-            (max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            40vw"
-      />
-      <Image
-        alt="image"
-        src="/images/main-image-1.png"
         width={0}
         height={0}
         style={{ width: "25rem", height: "30rem" }}
