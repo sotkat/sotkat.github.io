@@ -48,10 +48,10 @@ const ActiveTimesBannerWrapper = styled.div`
 const ActiveTimesBanner = (props: { time: number }) => {
   return (
     <ActiveTimesBannerWrapper className="open">
-      <p>Opening soon!</p>
-      <p>Opening soon!</p>
-      <p>Opening soon!</p>
-      <p>Opening soon!</p>
+      <p>Now open!</p>
+      <p>Now open!</p>
+      <p>Now open!</p>
+      <p>Now open!</p>
     </ActiveTimesBannerWrapper>
   );
 
@@ -72,7 +72,7 @@ const ActiveTimesBanner = (props: { time: number }) => {
 const Header = () => {
   return (
     <Wrapper>
-      {/* <ActiveTimesBanner time={new Date().getHours()} /> */}
+      <ActiveTimesBanner time={new Date().getHours()} />
     </Wrapper>
   );
 };
