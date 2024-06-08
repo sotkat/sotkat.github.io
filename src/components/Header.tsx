@@ -72,7 +72,7 @@ const ActiveTimesBanner = (props: { time: number }) => {
 const Header = () => {
   return (
     <Wrapper>
-      <ActiveTimesBanner time={new Date().getHours()} />
+      {/* <ActiveTimesBanner time={new Date().getHours()} /> */}
     </Wrapper>
   );
 };
