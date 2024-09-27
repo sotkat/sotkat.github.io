@@ -5,7 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center; /* Center both horizontally and vertically */
